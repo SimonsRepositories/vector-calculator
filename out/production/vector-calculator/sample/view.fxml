@@ -10,10 +10,22 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="403.0" prefWidth="600.0">
                <children>
-                  <TextField fx:id="tf_v1x" layoutX="178.0" layoutY="59.0" prefHeight="92.0" prefWidth="93.0" />
-                  <TextField fx:id="tf_v1y" layoutX="325.0" layoutY="59.0" prefHeight="92.0" prefWidth="93.0" />
-                  <TextField fx:id="tf_v2x" layoutX="178.0" layoutY="196.0" prefHeight="92.0" prefWidth="93.0" />
-                  <TextField fx:id="tf_v2y" layoutX="325.0" layoutY="198.0" prefHeight="92.0" prefWidth="93.0" />
+                  <TextField fx:id="tf_v1x" layoutX="203.0" layoutY="59.0" prefHeight="92.0" prefWidth="68.0">
+                     <font>
+                        <Font size="38.0" />
+                     </font></TextField>
+                  <TextField fx:id="tf_v1y" layoutX="325.0" layoutY="59.0" prefHeight="92.0" prefWidth="68.0">
+                     <font>
+                        <Font size="38.0" />
+                     </font></TextField>
+                  <TextField fx:id="tf_v2x" layoutX="203.0" layoutY="196.0" prefHeight="92.0" prefWidth="68.0">
+                     <font>
+                        <Font size="38.0" />
+                     </font></TextField>
+                  <TextField fx:id="tf_v2y" layoutX="325.0" layoutY="198.0" prefHeight="92.0" prefWidth="68.0">
+                     <font>
+                        <Font size="38.0" />
+                     </font></TextField>
                   <Label layoutX="36.0" layoutY="77.0" text="V1">
                      <font>
                         <Font size="37.0" />
@@ -44,22 +56,22 @@
                         <Font size="59.0" />
                      </font>
                   </Label>
-                  <Label layoutX="125.0" layoutY="58.0" text="&lt;">
+                  <Label layoutX="146.0" layoutY="57.0" text="&lt;">
                      <font>
                         <Font size="64.0" />
                      </font>
                   </Label>
-                  <Label layoutX="428.0" layoutY="57.0" text="&gt;">
+                  <Label layoutX="406.0" layoutY="58.0" text="&gt;">
                      <font>
                         <Font size="64.0" />
                      </font>
                   </Label>
-                  <Label layoutX="125.0" layoutY="197.0" text="&lt;">
+                  <Label layoutX="146.0" layoutY="197.0" text="&lt;">
                      <font>
                         <Font size="64.0" />
                      </font>
                   </Label>
-                  <Label layoutX="428.0" layoutY="197.0" text="&gt;">
+                  <Label layoutX="406.0" layoutY="197.0" text="&gt;">
                      <font>
                         <Font size="64.0" />
                      </font>
