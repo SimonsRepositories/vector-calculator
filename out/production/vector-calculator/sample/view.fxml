@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="963.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1026.0" prefWidth="863.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <tabs>
     <Tab text="Vectors 2D">
       <content>
@@ -125,9 +127,82 @@
                </children></AnchorPane>
       </content>
     </Tab>
-    <Tab text="Untitled Tab 2">
+    <Tab text="Simple Trigonometry">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+               <children>
+                  <VBox fx:id="vb_trigoInputs" layoutX="259.0" layoutY="171.0">
+                     <children>
+                        <TextField fx:id="tf_ta" prefHeight="98.0" prefWidth="202.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="tf_tb" prefHeight="98.0" prefWidth="202.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="tf_tc" prefHeight="98.0" prefWidth="202.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="tf_tA" prefHeight="98.0" prefWidth="202.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="tf_tB" prefHeight="98.0" prefWidth="202.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <Label layoutX="78.0" layoutY="188.0" text="side a">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="78.0" layoutY="315.0" text="side b">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="76.0" layoutY="426.0" text="side c">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="548.0" text="Angle A">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="81.0" layoutY="666.0" text="Angle B">
+                     <font>
+                        <Font size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="14.0" text="Enter all known variables to solve the unkown &#10;variables (leave the unknown blank)&#10;Only for triangles with perpendicular bisector." wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="246.0" fitWidth="322.0" layoutX="506.0" layoutY="336.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/Perpendicular.PNG" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="259.0" layoutY="801.0" mnemonicParsing="false" onAction="#calculateSimpleTrigonometry" text="Calculate" />
+                  <Button layoutX="327.0" layoutY="801.0" mnemonicParsing="false" onAction="#resetInputs" text="Reset" />
+                  <Label fx:id="lb_error" layoutX="106.0" layoutY="873.0" prefHeight="57.0" prefWidth="501.0" textFill="RED">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
       </content>
     </Tab>
   </tabs>

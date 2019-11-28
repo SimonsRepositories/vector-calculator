@@ -47,4 +47,46 @@ public class Model
         double cosA = dotProduct / (mv1 * mv2);
         return cosA;
     }
+
+
+
+
+    //simple trigonemtry
+    //angles
+    public double calculateSineAngle(double opposite, double hypothenuse) {
+        return Math.sin(opposite / hypothenuse) * -1;
+    }
+
+    public double calculateCosAngle(double adjacent, double hypothenuse) {
+        return Math.cos(adjacent / hypothenuse) * -1;
+    }
+
+    public double calculateTanAngle(double opposite, double adjacent) {
+        return Math.tan(opposite / adjacent) * -1;
+    }
+
+    //sides
+    public double calculateOpposite(double hypothenuse, double angle) {
+        return Math.sin(angle) * hypothenuse;
+    }
+
+    public double calculateHypothenuse(double opposite, double angle) {
+        return opposite / (Math.sin(angle));
+    }
+
+    public double calculateAdjacent(double hypothenuse, double angle) {
+        return hypothenuse * (Math.cos(angle));
+    }
+
+    public double calculateHypothenuse2(double adjacent, double angle) {
+        return adjacent / (Math.cos(angle));
+    }
+
+    public double calculateOpposite2(double adjacent, double angle) {
+        return adjacent * (Math.tan(angle));
+    }
+
+    public double calculateAdjacent2(double opposite, double angle) {
+        return opposite / (Math.tan(angle));
+    }
 }
