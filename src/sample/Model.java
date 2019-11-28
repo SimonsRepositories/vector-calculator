@@ -34,6 +34,8 @@ public class Model
     }
 
     public double calculateAngleBetweenTwoVectors(double v1x, double v1y, double v2x, double v2y) {
+        //https://onlinemschool.com/math/library/vector/angl/
+
         //calculate dot product of two vectors
         double vec1[] = {v1x, v1y};
         double vec2[] = {v2x, v2y};
@@ -45,7 +47,8 @@ public class Model
 
         //calculate angle between vectores
         double cosA = dotProduct / (mv1 * mv2);
-        return cosA;
+        double resultAngle = Math.toDegrees(Math.acos(cosA));
+        return resultAngle;
     }
 
 
@@ -54,39 +57,64 @@ public class Model
     //simple trigonemtry
     //angles
     public double calculateSineAngle(double opposite, double hypothenuse) {
-        return Math.sin(opposite / hypothenuse) * -1;
+        double result = Math.toDegrees(Math.asin(opposite / hypothenuse));
+        return result;
     }
 
     public double calculateCosAngle(double adjacent, double hypothenuse) {
-        return Math.cos(adjacent / hypothenuse) * -1;
+        double result = Math.toDegrees(Math.acos(adjacent / hypothenuse));
+        return result;
     }
 
     public double calculateTanAngle(double opposite, double adjacent) {
-        return Math.tan(opposite / adjacent) * -1;
+        double result = Math.toDegrees(Math.atan(opposite / adjacent));
+        return result;
     }
 
     //sides
     public double calculateOpposite(double hypothenuse, double angle) {
-        return Math.sin(angle) * hypothenuse;
+        return Math.sin(Math.toRadians(angle)) * hypothenuse;
     }
 
     public double calculateHypothenuse(double opposite, double angle) {
-        return opposite / (Math.sin(angle));
+        return opposite / (Math.sin(Math.toRadians(angle)));
     }
 
     public double calculateAdjacent(double hypothenuse, double angle) {
-        return hypothenuse * (Math.cos(angle));
+        return hypothenuse * (Math.cos(Math.toRadians(angle)));
     }
 
     public double calculateHypothenuse2(double adjacent, double angle) {
-        return adjacent / (Math.cos(angle));
+        return adjacent / (Math.cos(Math.toRadians(angle)));
     }
 
     public double calculateOpposite2(double adjacent, double angle) {
-        return adjacent * (Math.tan(angle));
+        return adjacent * (Math.tan(Math.toRadians(angle)));
     }
 
     public double calculateAdjacent2(double opposite, double angle) {
-        return opposite / (Math.tan(angle));
+        return opposite / (Math.tan(Math.toRadians(angle)));
+    }
+
+    public double calculateAdjacent3(double hypotenuse, double opposite) {
+        //phytagoras calc side b
+        double result = (hypotenuse * hypotenuse)-( opposite * opposite);
+        double result1 = Math.sqrt(result);
+        return result1;
+    }
+
+    public double calculateAdjacent4(double hypotenuse, double adjacent) {
+        //phytagoras calc side a
+        double result = (hypotenuse*hypotenuse)-(adjacent*adjacent);
+        double result1 = Math.sqrt(result);
+        return result1;
+    }
+
+
+    public double calculateAdjacent5(double opposite, double adjacent) {
+        //phtagoras calc side c
+        double result = (opposite * opposite) + (adjacent * adjacent);
+        double result1 = Math.sqrt(result);
+        return result1;
     }
 }

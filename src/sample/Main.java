@@ -15,6 +15,8 @@ public class Main extends Application {
 
         Model myModel = new Model();
 
+        //System.out.println("Sine of " + Math.tan(Math.toRadians(10)) * 22);
+
         Controller controller = new Controller();
         controller.setModel(myModel);
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view.fxml"));
