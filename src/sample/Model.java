@@ -22,6 +22,13 @@ public class Model
         return new double[]{v1, v2};
     }
 
+    public double[] calculateSubtractOfTwoVectors(double v1x, double v1y, double v2x, double v2y)
+    {
+        double v1 = v1x - v2x;
+        double v2 = v1y - v2y;
+        return new double[]{v1, v2};
+    }
+
     public double calculateDotProductBetweenTwoVectors(double vect_A[], double vect_B[]) {
         double product = 0;
         int n = 2;

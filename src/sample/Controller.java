@@ -34,6 +34,8 @@ public class Controller implements Initializable {
     private RadioButton rb_vectors3;
     @FXML
     private RadioButton rb_vectors4;
+    @FXML
+    private RadioButton rb_vectors5;
 
     //Result Labels
     @FXML
@@ -97,6 +99,7 @@ public class Controller implements Initializable {
         rb_vectors2.setToggleGroup(toggleGroup);
         rb_vectors3.setToggleGroup(toggleGroup);
         rb_vectors4.setToggleGroup(toggleGroup);
+        rb_vectors5.setToggleGroup(toggleGroup);
 
         RadioButton checked = (RadioButton) toggleGroup.getSelectedToggle(); //Cast object to radio button
         System.out.println("Selected Radio Button - " + checked.getText());
@@ -132,6 +135,13 @@ public class Controller implements Initializable {
                 lb_vectorsFormula.setText("");
                 double cosA = myModel.calculateAngleBetweenTwoVectors(v1x, v1y, v2x, v2y);
                 lb_vectorsResult.setText("angle = " + cosA);
+                break;
+            case "Substract v1 and v2":
+                lb_v1.setText("v1 = {" + tf_v1x.getText() + ", " + tf_v1y.getText() + "}");
+                lb_v2.setText("v2 = {" + tf_v2x.getText() + ", " + tf_v2y.getText() + "}");
+                lb_vectorsFormula.setText("");
+                double[] subtrahierung = myModel.calculateSubtractOfTwoVectors(v1x, v1y, v2x, v2y);
+                lb_vectorsResult.setText("subtraction = " + Arrays.toString(subtrahierung));
                 break;
             default:
                 lb_v1.setText("Not an option, mate");
